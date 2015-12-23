@@ -14,13 +14,17 @@
 ActiveRecord::Schema.define(version: 20151222163124) do
 
   create_table "playlists", force: :cascade do |t|
-    t.integer "user_id"
+    t.integer "spotify_account_id"
     t.string  "name"
     t.string  "songs"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "spotify_accounts", force: :cascade do |t|
     t.string "username"
+    t.string "display_name"
+    t.string "picture_url"
+    t.string "followers"
+    t.string "profile_url"
   end
 
 end

@@ -5,7 +5,7 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-
+RSpotify::authenticate("43315ec454d4496ead806bc98097e0f0", "3c199268456b4cf1bf582ee183375a54")
 module SpotifyBroadcasting
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.

@@ -1,0 +1,27 @@
+<%= form_for @spotify_account, :html => { :class => "form-horizontal spotify_account" } do |f| %>
+
+  <% if @spotify_account.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@spotify_account.errors.count, "error") %> prohibited this spotify_account from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @spotify_account.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                spotify_accounts_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
+<% end %>
