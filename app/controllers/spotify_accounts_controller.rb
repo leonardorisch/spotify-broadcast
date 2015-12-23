@@ -12,7 +12,6 @@ class SpotifyAccountsController < ApplicationController
     # Now you can access user's private data, create playlists and much more
 
     # Access private data
-    binding.pry
   end
 
   # GET /spotify_accounts/1
