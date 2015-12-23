@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :spotify_accounts
+
+  root to: 'spotify_accounts#index'
+
+  get '/auth/spotify/callback', to: 'spotify_accounts#spotify'
+  get '/welcome', to: 'spotify_accounts#show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
