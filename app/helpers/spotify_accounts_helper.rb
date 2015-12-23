@@ -1,0 +1,2 @@
+module SpotifyAccountsHelper
+end
